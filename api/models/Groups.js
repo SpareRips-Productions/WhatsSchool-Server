@@ -6,9 +6,26 @@
 */
 
 module.exports = {
-
-  attributes: {
-
-  }
+    autoCreatedAt: true,
+    autoUpdatedAt: true,
+    attributes: {
+        name: {
+            type: 'string',
+            required: true,
+            notEmpty: true
+        },
+        owner: {
+            model: 'users'
+        },
+        members: {
+            collection: 'users',
+            via: 'groups',
+            dominant: true
+        },
+        announcements: {
+            collection: 'announcements',
+            via: 'group'
+        }
+    }
 };
 

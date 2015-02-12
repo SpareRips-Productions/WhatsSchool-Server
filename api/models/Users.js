@@ -6,9 +6,38 @@
 */
 
 module.exports = {
-
-  attributes: {
-
-  }
+    autoCreatedAt: true,
+    autoUpdatedAt: true,
+    attributes: {
+        email: {
+            type: 'string',
+            unique: true,
+            required: true,
+            notEmpty: true,
+            email: true
+        },
+        firstName: {
+            type: 'string',
+            required: true,
+            notEmpty: true
+        },
+        lastName: {
+            type: 'string',
+            required: true,
+            notEmpty: true
+        },
+        role: {
+            type: 'string',
+            enum: ['student', 'teacher', 'admin']
+        },
+        ownedGroups: {
+            collection: 'groups',
+            via: 'owner'
+        },
+        groups: {
+          collection: 'groups',
+          via: 'members'
+        }
+    }
 };
 

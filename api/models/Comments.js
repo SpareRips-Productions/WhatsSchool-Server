@@ -6,9 +6,20 @@
 */
 
 module.exports = {
-
-  attributes: {
-
-  }
+    autoCreatedAt: true,
+    autoUpdatedAt: true,
+    attributes: {
+        text: {
+            type: 'string',
+            required: true,
+            notEmpty: true
+        },
+        announcement: {
+            model: 'announcements'
+        },
+        user: {
+            model: 'users'
+        }
+    }
 };
 
