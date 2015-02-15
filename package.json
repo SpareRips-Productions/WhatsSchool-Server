@@ -1,7 +1,7 @@
 {
   "name": "WhatsSchool-Server",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
@@ -28,10 +28,13 @@
     "debug": "node debug app.js"
   },
   "main": "app.js",
+  "engines": {
+    "node": "0.11.x"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thomas/WhatsSchool-Server.git"
+    "url": "git://github.com/thampe/WhatsSchool-Server.git"
   },
   "author": "thomas",
-  "license": ""
+  "license": "MIT"
 }
