@@ -26,9 +26,16 @@ module.exports = {
             required: true,
             notEmpty: true
         },
+        username: {
+            type: 'string',
+            required: true,
+            notEmpty: true,
+            unique: true
+        },
         role: {
             type: 'string',
-            enum: ['student', 'teacher', 'admin']
+            enum: ['student', 'teacher', 'admin'],
+            defaultsTo: 'student'
         },
         ownedGroups: {
             collection: 'groups',
