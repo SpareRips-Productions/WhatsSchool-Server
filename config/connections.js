@@ -80,6 +80,18 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
+  },
+
+  herokuPostgressqlServer: {
+    module: 'sails-postgresql',
+    host: process.env.PG_HOSTNAME || 'localhost',
+    user: process.env.PG_USER || 'root',
+    password: process.env.PG_PASSWORD || '',
+    database: process.env.PG_DATABASE || 'name_of_your_db',
+    port: process.env.PG_PORT || 5432,
+    ssl: {
+      rejectUnauthorized: false
+    }
   }
 
 
