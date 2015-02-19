@@ -18,7 +18,8 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-     connection: 'herokuPostgressqlServer'
+     connection: 'herokuPostgressqlServer',
+     migrate: 'alter'
   },
 
   /***************************************************************************
