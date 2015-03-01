@@ -14,6 +14,9 @@ module.exports = {
             required: true,
             notEmpty: true
         },
+        description: {
+            type: 'string'
+        },
         logo: {
             type: 'string',
             enum: ['ion-calendar', 'ion-clock', 'ion-coffee']
